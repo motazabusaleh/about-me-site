@@ -1,10 +1,15 @@
 'use strict'; // use strict mode to prevent doing mistakes 
 var wrongCounter = 0;
 var rightCounter = 0;
-var username = prompt("What is your name?")
-alert(
-    "Hello Mr. " + username
-);
+
+function userInput() {
+    var username = prompt("What is your name?")
+    alert(
+        "Hello Mr. " + username
+    );
+}
+
+userInput();
 
 var userInput = prompt("would you like to get to know me ? (yes , no)");
 console.log(userInput);
@@ -61,7 +66,7 @@ while (numGuesses < allowedGuess) {
     if (number == guess) {
         alert("you guessed corecct");
         rightCounter++;
-        break;
+        numGuesses = 4;
     }
 
     else if (number < guess) {
@@ -79,28 +84,28 @@ while (numGuesses < allowedGuess) {
 alert("you have failed lets try again")
 
 
-var guess = prompt("Guess a number: ");
-var number = 23;
-var allowedGuess = 6;
-var numGuesses = 0;
+var guess2 = prompt("Guess a number: ");
+var number2 = 23;
+var allowedGuess2 = 6;
+var numGuesses2 = 0;
 
-while (numGuesses < allowedGuess) {
-    console.log(numGuesses);
-    console.log(allowedGuess);
-    if (number < guess) {
+while (numGuesses2 < allowedGuess2) {
+    console.log(numGuesses2);
+    console.log(allowedGuess2);
+    if (number2 < guess2) {
         alert("TRY AGAIN")
         alert("The answer should be one of these numbers : 20, 21, 22, 23, 24, 25")
-        guess = prompt("number is high! Keep guessing!");
-        numGuesses++;
-    } else if (number > guess) {
+        guess2 = prompt("number2 is high! Keep guessing!");
+        numGuesses2++;
+    } else if (number2 > guess2) {
         alert("The answer should be one of these numbers : 20, 21, 22, 23, 24, 25")
-        guess = prompt("number is low! Keep guessing!");
-        numGuesses++;
+        guess2 = prompt("number2 is low! Keep guessing!");
+        numGuesses2++;
 
-    } else if (number === guess) {
+    } else if (number2 === guess2) {
         alert("you guessed corecct");
         rightCounter++;
-        break;
+        numGuesses2 = 6;
         
     }
 }
